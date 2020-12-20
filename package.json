@@ -1,0 +1,66 @@
+{
+  "name": "podo-world",
+  "private": true,
+  "description": "podo official site",
+  "version": "0.1.0",
+  "author": "Podo <podo.devops@gmail.com>",
+  "dependencies": {
+    "gatsby": "^2.24.26",
+    "gatsby-image": "^2.4.14",
+    "gatsby-plugin-manifest": "^2.4.21",
+    "gatsby-plugin-offline": "^3.2.21",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-sharp": "^2.6.24",
+    "gatsby-source-filesystem": "^2.3.23",
+    "gatsby-transformer-sharp": "^2.5.12",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.6.2",
+    "@types/react": "^16.9.48",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-helmet": "^6.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-tui": "^3.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "gatsby-plugin-sass": "^2.3.12",
+    "node-sass": "^4.14.1",
+    "prettier": "2.0.5",
+    "typescript": "^4.0.2"
+  },
+  "keywords": [
+    "podo",
+    "podo-official",
+    "podo-world",
+    "사실 이건 의미가 없지~"
+  ],
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "gatsby build & gh-pages -d public -b gh-pages",
+    "lint": "eslint .",
+    "check-types": "tsc --project ./tsconfig.json",
+    "validate": "npm run check-types && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pododev/brand-new"
+  },
+  "bugs": {
+    "url": "https://github.com/pododev/brand-new/issues"
+  }
+}

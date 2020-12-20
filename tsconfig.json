@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "module": "es2015",
+    "target": "es2015",
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "Node",
+    "strict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "noEmit": true,
+    "typeRoots": ["./types"],
+    "paths": {
+      "@src/*": ["src/*"],
+      "@t/*": ["types/*"]
+    },
+    "lib": ["dom", "es2015", "es2017", "esnext"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "types/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
