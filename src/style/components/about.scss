@@ -1,0 +1,48 @@
+//@import '../mixin';
+@import '../style';
+
+.section-wrapper {
+
+  @include mobile {
+    //background: #c65063;
+  }
+
+  @include tablet {
+    //background: #4d5fc6;
+  }
+
+  @include desktop {
+    width: 840px;
+    //background: #a7adc6;
+  }
+
+  .title {
+    margin-top: 24px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .corp {
+    margin-top: 8px;
+    font-size: 18px;
+  }
+
+  .duration {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #a0a0a0;
+  }
+
+  .description {
+    padding: 16px 0;
+    font-size: 16px;
+
+    p {
+      padding-top: 8px;
+    }
+
+    b {
+      font-weight: bold;
+    }
+  }
+}

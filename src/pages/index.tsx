@@ -2,12 +2,14 @@ import React from 'react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Team from "../components/team";
+import Bio from '../components/bio';
+import About from '../components/about';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <Team />
+    <SEO title="Home"/>
+    <Bio/>
+    <About/>
   </Layout>
 );
 

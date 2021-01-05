@@ -3,15 +3,19 @@ import React from 'react';
 
 interface HeaderProps {
   siteTitle: string;
+  categories: string[];
 }
 
-const Header: React.FC<HeaderProps> = ({ siteTitle }) => (
-  <header className="header">
-    <h1>
+const Header: React.FC<HeaderProps> = ({ siteTitle, categories }) => {
+
+  return (
+    <header className="header">
       <Link to="/">{siteTitle}</Link>
-    </h1>
-    Header 영역입니다. 스타일은 style.scss에서 지정합니다.
-  </header>
-);
+      <div className="categories">
+        {categories.map((category: string) => <Link to={'/' + category}>{category.toUpperCase()}</Link>)}
+      </div>
+    </header>
+  );
+};
 
 export default Header;

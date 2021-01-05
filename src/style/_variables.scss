@@ -1,0 +1,111 @@
+$breakpoint-mobile: 335px;
+$breakpoint-tablet: 758px;
+$breakpoint-desktop: 1024px;
+
+$default-font: "Apple SD Gothic Neo", "Malgun Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$default-letter-spacing: -0.05em;
+
+$attribute-suffix-props: "props";
+$attribute-suffix-attrs: "attrs";
+$attribute-suffix-partial: "partial";
+$attribute-suffix-action: "action";
+
+// font sizes
+$font-size-default: 14px;
+$font-size-12: 12px;
+$font-size-13: 13px;
+$font-size-14: $font-size-default;
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-20: 20px;
+$font-size-24: 24px;
+$font-size-26: 26px;
+$-font-size-list: (
+    ($font-size-12, 18px),
+    ($font-size-13, 20px),
+    ($font-size-14, 21px),
+    ($font-size-16, 25px),
+    ($font-size-18, 27px),
+    ($font-size-20, 30px),
+    ($font-size-24, 36px),
+    ($font-size-26, 40px)
+);
+
+// font-weight
+$light-weight: 300;
+$normal-weight: 400;
+$medium-weight: 500;
+$semibold-weight: 600;
+$bold-weight: 700;
+
+// colors
+$color-gray-900: #111111;
+$color-gray-800: #555555;
+$color-gray-700: #777777;
+$color-gray-600: #999999;
+$color-gray-500: #cccccc;
+$color-gray-400: #d9d9d9;
+$color-gray-300: #dddddd;
+$color-gray-200: #eeeeee;
+$color-gray-100: #f5f5f5;
+
+$color-blue-400: #2B41BE;
+$color-blue-300: #346AFF;
+$color-blue-200: #AACCFD;
+$color-blue-100: #F1F6FF;
+$color-blue-50: #F3F5F7;
+
+$color-bluegray-400: transparent;
+$color-bluegray-300: #8797AF;
+$color-bluegray-200: transparent;
+$color-bluegray-100: transparent;
+
+$color-green-400: #1C5E20;
+$color-green-300: #00AF00;
+$color-green-200: #B6E7B8;
+$color-green-100: #E5F7E5;
+
+$color-red-400: #C00505;
+$color-red-300: #E12705;
+$color-red-200: #FDAA9B;
+$color-red-100: #FBEAE7;
+
+$color-orange-400: #B24100;
+$color-orange-300: #FC8500;
+$color-orange-200: #FFCC85;
+$color-orange-100: #FFEED6;
+
+$color-black-900: #000000;
+$color-black-800: rgba(0, 0, 0, 0.5);
+
+$color-white: #FFFFFF;
+
+$color-transparent: #FFFFFF00;
+
+$color-primary: #0073e9;
+
+$color-border-disabled: mix(#888, #fff, 40%);
+$color-border-disabled-primary: mix($color-primary, #fff, 40%);
+
+$color-bg-dimmed: mix(#000, #fff, 40%);
+$color-bg-dimmed-primary: mix($color-primary, #fff, 40%);
+$color-bg-dimmed-positive: mix(#00b16a, #fff, 40%);
+$color-bg-dimmed-negative: mix(#ef4836, #fff, 40%);
+$color-bg-dimmed-warning: mix(#ffa912, #fff, 40%);
+$color-bg-disabled: mix(#ccc, #fff, 40%);
+
+$color-btn-primary-pressed: mix(#000, $color-primary, 10%);
+$color-btn-positive-pressed: mix(#000, #00b16a, 10%);
+$color-btn-negative-pressed: mix(#000, #ef4836, 10%);
+$color-btn-warning-pressed: mix(#000, #ffa912, 10%);
+
+$color-row-primary: mix($color-primary, #fff, 5%);
+$color-row-positive: mix(#00b16a, #fff, 5%);
+$color-row-negative: mix(#ef4836, #fff, 5%);
+$color-row-warning: mix(#ffa912, #fff, 5%);
+
+// Component sizes
+$size-weight: 4px;
+$component-sizes: ($size-weight * 4, $size-weight * 6, $size-weight * 8, $size-weight * 10, $size-weight * 12);
+
+$component-rounding: 5px;

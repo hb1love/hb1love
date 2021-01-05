@@ -1,36 +1,58 @@
-@import './mixin';
-@import './reset';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'mixin';
+@import 'reset';
+@import 'variables';
 
-// @TODO: 지정된 style 제거 후 디자인으로 생성 필요
+section {
+  padding: component-spacing(6);
+}
+
 .header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
   display: flex;
-  height: 40px;
-  justify-content: center;
+  height: 54px;
+  justify-content: space-between;
   align-items: center;
 
-  background: #5f4b66;
-  color: #fff;
+  background: #ffffffdd;
+
+  a {
+    @include box-sizing(border-box);
+    padding: component-spacing(4);
+    font-size: $font-size-16;
+    color: $color-bluegray-300;
+    transition: 0.3s;
+
+    &:hover {
+      color: violet;
+    }
+  }
 }
 
 .main {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  margin-top: component-spacing(16);
 
   min-height: calc(100vh - 80px);
-  color: #fff;
+  //background: #eceef3;
+  //color: #fff;
 
   // @TODO: 반응형은 이렇게. 이후 제거 필요
   @include mobile {
-    background: #c65063;
+    //background: #c65063;
   }
 
   @include tablet {
-    background: #4d5fc6;
+    //background: #4d5fc6;
   }
 
   @include desktop {
-    background: #a7adc6;
+    //background: #a7adc6;
   }
 }
 
@@ -39,10 +61,13 @@
   justify-content: center;
   align-items: center;
   height: 40px;
+  margin-top: auto;
 
   background: #8797af;
   color: #fff;
 }
+
+
 
 .wrapper {
   display: flex;
@@ -89,10 +114,10 @@
     bottom: 0;
     height: 200px;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.95+100 */
-    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.95) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f2000000',GradientType=0 ); /* IE6-9 */
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#f2000000', GradientType=0); /* IE6-9 */
 
   }
 }
