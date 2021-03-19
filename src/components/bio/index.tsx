@@ -1,19 +1,101 @@
-import React from 'react';
-import Image from '../components/image';
-import Card from '../components/card';
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Image from 'gatsby-image'
+import Card from '../card'
+import styled from 'styled-components'
+
+const BioWidget = styled.div`
+  position: sticky;
+  top: 6em;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin-right: 4em;
+`;
+
+const Profile = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: 240px;
+
+  img {
+    border-radius: 50%;
+  }
+`
+
+const Name = styled.div`
+  padding: 24px 0;
+  font-size: 26px;
+  font-weight: bold;
+`
+
+const Introduction = styled.div`
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 240px;
+
+  p {
+    padding-bottom: 8px;
+  }
+`
+
+const VCard = styled.div`
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 24px 0;
+`
+
+const VCardLi = styled.li`
+  display: flex;
+  padding: 8px 0;
+
+  a {
+    font-size: 16px;
+    color: #8797AF;
+    transition: 0.3s;
+
+    &:visited {
+      color: #8797AF;
+    }
+
+    &:hover {
+      color: violet;
+    }
+  }
+
+  svg {
+    margin-right: 8px;
+  }
+`
 
 const Bio: React.FC = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "cat.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 240) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
   return (
-    <div className={`bio`}>
+    <BioWidget>
       <Card>
-        <div className={`profile`}><Image/></div>
-        <div className={`name`}>Kim Heebeom</div>
-        <div className={`introduction`}>
+        <Profile><Image fluid={data.file.childImageSharp.fluid}/></Profile>
+        <Name>Kim Heebeom</Name>
+        <Introduction>
           <p>I ❤️ 👨🏻‍💻📱🧗🚴🎯🏓⚽☕️🍶🍺🍣🍜🍔🍓🍌🌧❄✈️️</p>
           Everyone thinks of changing the world, but no one thinks of changing himself. - Leo Tolstoy
-        </div>
-        <div className={`v-card`}>
-          <li>
+        </Introduction>
+        <VCard>
+          <VCardLi>
             <a href={"https://www.coupang.com/"} target={"_blank"}>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-building" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
@@ -23,8 +105,8 @@ const Bio: React.FC = () => {
               </svg>
               Coupang Corp.
             </a>
-          </li>
-          <li>
+          </VCardLi>
+          <VCardLi>
             <a href={"https://goo.gl/maps/9KwbEcDJErx5u9ATA"} target={"_blank"}>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-geo-alt" viewBox="0 0 16 16">
                 <path
@@ -33,8 +115,8 @@ const Bio: React.FC = () => {
               </svg>
               Jamsil & Pangyo
             </a>
-          </li>
-          <li>
+          </VCardLi>
+          <VCardLi>
             <a href={"mailto:heebuma@gmail.com"}>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-envelope" viewBox="0 0 16 16">
                 <path
@@ -42,11 +124,23 @@ const Bio: React.FC = () => {
               </svg>
               heebuma@gmail.com
             </a>
-          </li>
-        </div>
+          </VCardLi>
+        </VCard>
       </Card>
-    </div>
-  );
+    </BioWidget>
+  )
 };
+
+const BioQuery = graphql`
+  query BioQuery {
+    avatar: file(absolutePath: { regex: "/cat.jpg" }) {
+      childImageSharp {
+        fixed(maxwidth: 240) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
 
 export default Bio;

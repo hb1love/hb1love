@@ -1,16 +1,66 @@
 import React from 'react';
-import { SectionWrapper } from './section-wrapper';
-import Card from '../components/card';
+import { AboutSection } from './section';
+import Card from '../card';
 import styled from 'styled-components';
 
+const AboutWrapper = styled.div`
+  margin-right: 20rem;
+`
+
 const CardWrapper = styled.div`
-  margin: 36px 0;
+  margin-top: 36px;
+`;
+
+const Title = styled.div`
+  margin-top: 24px;
+  font-size: 20px;
+  font-weight: bold;
+`;
+
+const Corp = styled.div`
+  margin-top: 8px;
+  font-size: 18px;
+`;
+
+const Duration = styled.span`
+  margin-left: 10px;
+  font-size: 16px;
+  color: #a0a0a0;
+  font-style: italic;
+`;
+
+const Description = styled.div`
+  padding: 16px 0;
+  font-size: 16px;
+
+  p {
+    padding-top: 8px;
+  }
+
+  b {
+    font-weight: bold;
+  }
+`;
+
+const Skill = styled.div`
+  margin-top: 24px;
+`;
+
+const STitle = styled.span`
+  font-size: 20px;
+  font-weight: bold;
+`;
+
+const SDescription = styled.div`
+  padding: 16px 0;
+  font-size: 16px;
+  line-height: 20px;
 `;
 
 export const About: React.FC = () => {
   const works = [
     {
-      position: <b>Mobile Developer</b>,
+      position: 'Mobile Developer',
       corp: 'Coupang Corp.',
       duration: '2020.05 - present',
       desc: ""
@@ -34,13 +84,13 @@ export const About: React.FC = () => {
 
   const projects = [
     {
-      name: 'Coupang mobile',
+      name: 'Coupang',
       corp: 'Coupang Corp.',
       duration: '2020.05 - present',
       desc: ""
     },
     {
-      name: 'Wing mobile',
+      name: 'Wing',
       corp: 'Coupang Corp.',
       duration: '2020.06 - present',
       desc: ""
@@ -83,36 +133,45 @@ export const About: React.FC = () => {
       )
     },
   ];
-  const skills = {
-    advanced: [
-      'Swift & RxSwift',
-      'Mobile Architecture Design',
-      'Auto Layout/Storyboard UI Development'
-    ],
-    intermediate: [
-      'Quick & Nimble Testing',
-      'Agile Development',
-      'Git & Tools'
-    ],
-    beginner: [
-      'Javascript & Typescript',
-      'CSS & Sass'
-    ]
-  };
+
+  const skills = [
+    {
+      name: 'Swift & RxSwift',
+      score: '⭐️⭐️⭐️⭐️',
+      desc: `
+          My "native" programming language, I've worked with it for over 4 years.
+          I've used it in the front-end with React and Redux, in the back-end for APIs with Node,
+          Express and Hapi.js and for testing automation using Mocha and later on, Jest.
+        `
+    },
+    {
+      name: 'Testing',
+      score: '⭐️⭐️⭐️',
+      desc: `
+          My "native" programming language, I've worked with it for over 4 years.
+          I've used it in the front-end with React and Redux, in the back-end for APIs with Node,
+          Express and Hapi.js and for testing automation using Mocha and later on, Jest.
+        `
+    },
+    {
+      name: 'Mobile Architecture Design',
+      score: '⭐️⭐️⭐️',
+      desc: `
+          My "native" programming language, I've worked with it for over 4 years.
+          I've used it in the front-end with React and Redux, in the back-end for APIs with Node,
+          Express and Hapi.js and for testing automation using Mocha and later on, Jest.
+        `
+    }
+  ];
 
   const side_projects = [
     {
-      name: 'Podolist',
+      name: 'MEDIAMUG',
       store: '',
       desc: ''
     },
     {
-      name: 'Lunar',
-      store: '',
-      desc: ''
-    },
-    {
-      name: 'Wepet',
+      name: 'Fantazia',
       store: '',
       desc: ''
     },
@@ -121,71 +180,82 @@ export const About: React.FC = () => {
       store: '',
       desc: ''
     },
+    {
+      name: 'Lunarrr',
+      store: '',
+      desc: ''
+    },
+    {
+      name: 'Podolist',
+      store: '',
+      desc: ''
+    },
   ];
 
   return (
-    <div className={`about`}>
+    <AboutWrapper>
       <CardWrapper>
         <Card>
-          <SectionWrapper title={`👨🏻‍💻 Work`}>
-            {works.map((work) => {
+          <AboutSection title={`👨🏻‍💻 Work`}>
+            {works.map((e) => {
               return (
                 <div>
-                  <div className={`title`}>{work.position}</div>
-                  <div className={`corp`}>
-                    <span>{work.corp}</span><span className={`duration`}>{work.duration}</span>
-                  </div>
-                  <div className={`description`}>{work.desc}</div>
+                  <Title>{e.position}</Title>
+                  <Corp><span>{e.corp}</span><Duration>{e.duration}</Duration></Corp>
+                  <Description>{e.desc}</Description>
                 </div>
               );
             })}
-          </SectionWrapper>
+          </AboutSection>
         </Card>
       </CardWrapper>
       <CardWrapper>
         <Card>
-          <SectionWrapper title={`🚀 Projects`}>
-            {projects.map((project) => {
+          <AboutSection title={`🚀 Projects`}>
+            {projects.map((e) => {
               return (
                 <div>
-                  <div className={`title`}>{project.name}</div>
-                  <div className={`corp`}>
-                    <span>{project.corp}</span><span className={`duration`}>{project.duration}</span>
-                  </div>
-                  <div className={`description`}>{project.desc}</div>
+                  <Title>{e.name}</Title>
+                  <Corp><span>{e.corp}</span><Duration>{e.duration}</Duration></Corp>
+                  <Description>{e.desc}</Description>
                 </div>
               );
             })}
-          </SectionWrapper>
+          </AboutSection>
         </Card>
       </CardWrapper>
       <CardWrapper>
         <Card>
-          <SectionWrapper title={`📚 Skills`}>
-
-          </SectionWrapper>
+          <AboutSection title={`📚 Skills`}>
+            {skills.map((e) => {
+              return (
+                <Skill>
+                  <STitle>{e.name} {e.score}</STitle>
+                  <SDescription>{e.desc}</SDescription>
+                </Skill>
+              );
+            })}
+          </AboutSection>
         </Card>
       </CardWrapper>
       <CardWrapper>
         <Card>
-          <SectionWrapper title={`🎓 Education`}>
+          <AboutSection title={`🎓 Education`}>
             <div>
-              <div className={`title`}>BACHELOR'S DEGREE, Computer Science & Engineering</div>
-              <div className={`corp`}>
-                <span>Chungnam National University</span><span className={`duration`}>2011 — 2017</span>
-              </div>
+              <Title>BACHELOR'S DEGREE, Computer Science & Engineering</Title>
+              <Corp><span>Chungnam National University</span><Duration>2011 — 2017</Duration></Corp>
             </div>
-          </SectionWrapper>
+          </AboutSection>
         </Card>
       </CardWrapper>
       <CardWrapper>
         <Card>
-          <SectionWrapper title={`🕹 Side Projects`}>
+          <AboutSection title={`🕹 Side Projects`}>
 
-          </SectionWrapper>
+          </AboutSection>
         </Card>
       </CardWrapper>
-    </div>
+    </AboutWrapper>
   );
 };
 

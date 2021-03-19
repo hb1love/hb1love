@@ -1,45 +1,57 @@
-/* eslint-disable */
+const metaConfig = require('./gatsby-meta-config')
+
 module.exports = {
-  siteMetadata: {
-    title: `Heebeom's Blog`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@KimHeebeom`,
-    categories: [`blog`, `about`]
-  },
+  siteMetadata: metaConfig,
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
         path: `${__dirname}/src/pages/blog`,
+        name: `blog`,
       },
     },
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/pages/about`,
+        name: `about`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/assets`,
+        name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: metaConfig.ga,
+        head: true,
+        anonymize: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: metaConfig.title,
+        short_name: metaConfig.title,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/cat.jpg`, // This path is relative to the root of the site.
+        icon: metaConfig.icon,
       },
     },
-    'gatsby-plugin-sass',
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-feed`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-lodash`,
+    `gatsby-plugin-sitemap`,
   ],
 };

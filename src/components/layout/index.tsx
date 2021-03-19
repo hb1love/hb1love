@@ -1,12 +1,9 @@
 import React from 'react';
-import Header from './header';
-import Footer from './footer';
-
-import '../style/_reset.scss';
-import '../style/style.scss';
-import '../style/components/about.scss'
-import '../style/components/bio.scss'
+import Header from '../header';
+import Footer from '../footer';
 import { graphql, useStaticQuery } from 'gatsby';
+
+import '../../styles/styles.scss';
 
 const Layout: React.FC = ({ children }) => {
   const { site } = useStaticQuery(
