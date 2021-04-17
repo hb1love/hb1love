@@ -1,0 +1,33 @@
+@import '../../styles/variables.scss';
+
+.category-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  -ms-overflow-style: none; // IE 10+
+  overflow: -moz-scrollbars-none; // Firefox
+  padding: 32px;
+
+  .item {
+    box-sizing: border-box;
+    margin: 0.25rem 6px 0.25rem 0;
+    padding: 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
+
+.category-container::-webkit-scrollbar {
+  display: none; // Safari and Chrome
+}
+
+.category-container {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  .my-smooth-container {
+    scroll-behavior: auto;
+  }
+}

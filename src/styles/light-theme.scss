@@ -1,0 +1,84 @@
+@mixin light-link {
+  a {
+    color: $light-link-color;
+
+    &:visited {
+      color: $light-link-color;
+    }
+
+    &:hover {
+      color: $light-hover-link-color;
+    }
+  }
+}
+
+body.light {
+  background-color: $light-background-color;
+  text-shadow: $light-text-shadow;
+
+  .header {
+    background-color: $light-header-background-color;
+    @include light-link;
+  }
+
+  .bio {
+    @include light-link;
+  }
+
+  .card {
+    box-shadow: $light-card-shadow;
+  }
+
+  .short-bio {
+    .author-name-content {
+      background-color: $light-short-bio-background-color;
+    }
+    .author-introduction {
+      color: $middle-gray;
+    }
+    .author-socials {
+      @include light-link;
+    }
+    a {
+      color: $light-link-color;
+    }
+  }
+
+  .category-container {
+    .item {
+      color: $light-category-text-color;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+      
+      &[aria-selected='true'] {
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+        -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+        font-weight: bolder;
+      }
+    }
+  }
+
+  .thumbnail {
+    h3 {
+      color: $dark-gray;
+    }
+    p {
+      color: $middle-gray;
+    }
+    &:hover {
+      text-shadow: $light-hover-text-shadow;
+    }
+  }
+
+  .footer {
+    @include light-link;
+  }
+
+  // post
+  .navigator {
+    a {
+      background-color: $navigator-background-color;
+      color: $navigator-text-color;
+    }
+  }
+}

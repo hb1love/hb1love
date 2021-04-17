@@ -1,30 +1,18 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  root: true,
   env: {
-    node: true,
+    browser: true,
     es6: true,
   },
+  plugins: ['react'],
+  globals: {
+    graphql: false,
+  },
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 2017,
     sourceType: 'module',
     ecmaFeatures: {
-      impliedStrict: true,
+      experimentalObjectRestSpread: true,
       jsx: true,
     },
   },
-  plugins: ['prettier', '@typescript-eslint'],
-  extends: [
-    'react-app',
-    'tui/es6',
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended',
-    'plugin:@typescript-eslint/recommended',
-  ],
-  rules: {
-    'prettier/prettier': 'error',
-  },
-  globals: {
-    graphql: true,
-  },
-};
+}

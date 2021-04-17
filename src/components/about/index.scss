@@ -1,0 +1,55 @@
+.about {
+  padding-top: 40px;
+
+  .card-wrapper {
+    margin-bottom: 36px;
+
+    .about-title {
+      margin-top: 24px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .about-corp {
+      margin-top: 8px;
+      font-size: 18px;
+    }
+
+    .about-duration {
+      margin-left: 10px;
+      font-size: 16px;
+      color: #a0a0a0;
+      font-style: italic;
+    }
+
+    .about-description {
+      padding: 16px 0;
+      font-size: 16px;
+    
+      p {
+        padding-top: 8px;
+        padding-bottom: 0;
+        margin: 0;
+      }
+    
+      b {
+        font-weight: bold;
+      }
+    }
+
+    .skill {
+      margin-top: 24px;
+
+      .skill-title {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .skill-description {
+        padding: 16px 0;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}

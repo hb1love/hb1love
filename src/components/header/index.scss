@@ -1,0 +1,18 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 54px;
+  z-index: 1;
+
+  a {
+    box-sizing: border-box;
+    padding: 16px;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+}

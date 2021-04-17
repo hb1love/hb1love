@@ -1,0 +1,97 @@
+@mixin dark-link {
+  a {
+    color: $dark-link-color;
+
+    &:visited {
+      color: $dark-link-color;
+    }
+
+    &:hover {
+      color: $dark-hover-link-color;
+    }
+  }
+}
+
+body.dark {
+  background-color: $dark-background-color;
+  text-shadow: $dark-text-shadow;
+  color: $dark-light-font-color;
+
+  .header {
+    background-color: $dark-header-background-color;
+    @include dark-link;
+  }
+
+  .bio {
+    @include dark-link;
+  }
+
+  .card {
+    box-shadow: $dark-card-shadow;
+  }
+
+  .short-bio {
+    .author-name-content {
+      background-color: $dark-short-bio-background-color
+    }
+    .author-introduction {
+      color: $dark-middle-font-color;
+    }
+    .author-socials {
+      @include dark-link;
+    }
+    a {
+      color: $dark-link-color;
+    }
+  }
+
+  .category-container {
+    .item {
+      color: $dark-category-text-color;
+      box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.1);
+      -webkit-box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.1);
+      
+      &[aria-selected='true'] {
+        box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.8);
+        -webkit-box-shadow: 0px 1px 3px rgba(255, 255, 255, 0.8);
+        font-weight: bolder;
+      }
+    }
+  }
+
+  .thumbnail {
+    h3 {
+      color: $dark-light-font-color;
+    }
+    p {
+      color: $dark-middle-font-color;
+    }
+    &:hover {
+      text-shadow: $dark-hover-text-shadow;
+    }
+  }
+
+  .footer {
+    @include dark-link;
+  }
+
+  // post
+  blockquote {
+    border-left: 4px solid rgba(255, 255, 255, 0.822);
+  }
+
+  h1,
+  h2 {
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .navigator {
+    a {
+      background-color: $navigator-background-color;
+      color: $navigator-text-color;
+    }
+  }
+  td {
+    border-bottom: 1px solid #eee;
+  }
+}

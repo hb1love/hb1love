@@ -1,0 +1,72 @@
+// app
+$theme-gradient: linear-gradient(72deg, #291e95, #cc007a);
+
+// index
+$dimmed-color: #eef5db;
+$dark-gray: #333;
+$middle-gray: #7d7d7d;
+$light-gray: #aaa;
+
+// blog-templates
+$navigator-text-color: #cc007a;
+$navigator-background-color: #fceff7;
+$blockquote-text-color: #999;
+
+// code
+$inline-dimmed-color: #ece5f1;
+$inline-text-color: #4b2043;
+
+
+/**
+ * @light theme
+ */
+
+// body
+$light-background-color: #fff;
+$light-text-shadow: 0 0 0.1px rgba(0, 0, 0, 0.3);
+$light-hover-text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+
+// a
+$light-link-color: #8797AF;
+$light-hover-link-color: violet;
+
+// header
+$light-header-background-color: #ffffffdd;
+
+// card
+$light-card-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+
+// category
+$light-category-text-color: #00376b;
+
+// short bio
+$light-short-bio-background-color: #ecf0f2;
+
+/**
+ * @dark theme
+ */
+
+ // body
+$dark-background-color: #282c35;
+$dark-text-shadow: 0 0 0.1px rgba(255, 255, 255, 0.3);
+$dark-hover-text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+
+$dark-lightest-font-color: #fff;
+$dark-light-font-color: #eeeeee;
+$dark-middle-font-color: #d8d7d7;
+
+// a
+$dark-link-color: #8797AF;
+$dark-hover-link-color: violet;
+
+// header
+$dark-header-background-color: #282c35dd;
+
+// card
+$dark-card-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.6);
+
+// category
+$dark-category-text-color: #ecf0f2;
+
+// short bio
+$dark-short-bio-background-color: #ecf0f2;

@@ -1,11 +1,27 @@
 module.exports = {
   title: `@Jayce Kim`,
-  description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-  author: `@Jayce Kim`,
-  categories: [`blog`, `about`],
-  icon: `static/cat.jpg`, // favicon
-  configs: {
-    countOfInitialPost: 10
+  description: ``,
+  author: `Jayce Kim`,
+  introduction: `I explain with words and code. I explain with words and code. I explain with words and code.`,
+  pages: [[`BLOG`, `/posts`], [`ABOUT`, `/about`]],
+  social: {
+    twitter: ``,
+    github: `hb1love`,
+    medium: ``,
+    facebook: ``,
+    linkedin: `heebeom-kim`,
+    instagram: ``,
   },
-  ga: '0', // google analytics tranking ID
+  icon: `static/cat.jpg`, // favicon
+  keywords: [`blog`],
+  comment: {
+    utterances: 'hb1love/hb1love',
+  },
+  configs: {
+    countOfInitialPost: 10,
+  },
+  sponsor: {
+    buyMeACoffeeId: 'heebeom',
+  },
+  ga: 'UA-143193629-1',
 }

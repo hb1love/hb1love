@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.thumbnail {
+  display: block;
+  margin-bottom: 48px;
+  transition: text-shadow 0.3s, opacity 0.4s;
+  opacity: 0;
+
+  h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
+
+.thumbnail.visible {
+  opacity: 1;
+}

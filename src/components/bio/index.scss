@@ -1,0 +1,60 @@
+@import '../../styles/variables.scss';
+
+.bio {
+  position: sticky;
+  top: 8em;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin-right: 4em;
+
+  .bio-profile {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 240px;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .bio-name {
+    padding: 24px 0;
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  .bio-introduction {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 240px;
+
+    p {
+      padding-bottom: 8px;
+    }
+  }
+
+  .bio-vcard {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 24px;
+
+    li {
+      display: flex;
+      padding: 8px 0;
+
+      a {
+        font-size: 16px;
+        transition: 0.3s;
+      }
+
+      svg {
+        margin-right: 8px;
+      }
+    }
+  }
+}
