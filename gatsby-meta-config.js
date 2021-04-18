@@ -4,6 +4,7 @@ module.exports = {
   author: `Jayce Kim`,
   introduction: `I explain with words and code. I explain with words and code. I explain with words and code.`,
   pages: [[`BLOG`, `/posts`], [`ABOUT`, `/about`]],
+  siteUrl: `https://heebeom.me`,
   social: {
     twitter: ``,
     github: `hb1love`,
