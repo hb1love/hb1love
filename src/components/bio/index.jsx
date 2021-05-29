@@ -20,6 +20,7 @@ export const Bio = () => (
             <div className="bio-name">{author}</div>
             <div className="bio-introduction">
               <p>I ❤️ 👨🏻‍💻📱🧗🚴🎯🏓⚽☕️🍶🍺🍣🍜🍔🍓🍌🌧❄✈️️</p>
+              쿠팡에서 일하고 있는 iOS 개발자입니다. 하루에도 몇 번씩 우리의 지향점을 생각하고, 목표를 위해 하루하루를 치열하게 살아가고 있습니다.<br/><br/>
               Everyone thinks of changing the world, but no one thinks of changing himself. - Leo Tolstoy
             </div>
             <div className="bio-vcard">
@@ -35,13 +36,13 @@ export const Bio = () => (
                 </a>
               </li>
               <li>
-                <a href={"https://goo.gl/maps/9KwbEcDJErx5u9ATA"} target={"_blank"}>
+                <a href={"https://www.google.com/maps/place/HJ%ED%83%80%EC%9B%8C/@37.5038362,127.0459816,17z/data=!3m1!4b1!4m5!3m4!1s0x357ca5c68ac61a5b:0x9b978f877b9f9fe0!8m2!3d37.5038362!4d127.0481703"} target={"_blank"}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-geo-alt" viewBox="0 0 16 16">
                     <path
                       d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
                     <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                   </svg>
-                  Jamsil & Pangyo
+                  Seolleung
                 </a>
               </li>
               <li>

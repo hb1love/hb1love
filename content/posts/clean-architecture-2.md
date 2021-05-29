@@ -2,7 +2,7 @@
 title: 'iOS Clean Architecture with TDD #2. Entities & Use Cases'
 date: 2020-07-17
 category: 'architecture'
-draft: false
+draft: true
 ---
 
 이번엔 지난 포스트에서 생성한 MovieBook 프로젝트에서 다른 계층의 영향을 받지 않는 Domain을 개발할 것이다. 추후 과정은 외부 영향도가 적은 **내부 계층**부터 **외부 계층 **순으로 진행한다. 의존성을 가진 계층을 먼저 개발하게 되면 명확하지 않은 의존 객체의 명세에 의해서 얼 타는 수가 생긴다.

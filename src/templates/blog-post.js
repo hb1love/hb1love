@@ -38,9 +38,9 @@ export default ({ data, pageContext }) => {
         <PostContainer html={post.html} />
         <Elements.Hr />
         <ShortBio />
-        {/* {!!sponsor.buyMeACoffeeId && (
+        {!!sponsor.buyMeACoffeeId && (
           <SponsorButton sponsorId={sponsor.buyMeACoffeeId} />
-        )} */}
+        )}
         <PostNavigator pageContext={pageContext} />
         {!!utterances && <Utterances repo={utterances} />}
       </div>

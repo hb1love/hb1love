@@ -1,9 +1,9 @@
 module.exports = {
-  title: `@Jayce Kim`,
+  title: `@Heebeom Kim`,
   description: ``,
-  author: `Jayce Kim`,
-  introduction: `I explain with words and code. I explain with words and code. I explain with words and code.`,
-  pages: [[`BLOG`, `/posts`], [`ABOUT`, `/about`]],
+  author: `Heebeom Kim`,
+  introduction: `iOS Engineer. Interested in Architecture, Automation. Work for CPNG`,
+  pages: [[`BLOG`, `/posts`]/*, [`ABOUT`, `/about`]*/],
   siteUrl: `https://heebeom.me`,
   social: {
     twitter: ``,
@@ -13,7 +13,7 @@ module.exports = {
     linkedin: `heebeom-kim`,
     instagram: ``,
   },
-  icon: `static/cat.jpg`, // favicon
+  icon: `static/favicon.png`,
   keywords: [`blog`],
   comment: {
     utterances: 'hb1love/hb1love',
@@ -23,6 +23,6 @@ module.exports = {
   },
   sponsor: {
     buyMeACoffeeId: 'heebeom',
-  },
+  },  
   ga: 'UA-143193629-1',
 }

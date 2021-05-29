@@ -2,7 +2,7 @@
 title: 'iOS Clean Architecture with TDD #1. Concept & Structure'
 date: 2020-07-16
 category: 'architecture'
-draft: false
+draft: true
 ---
 
 > 아키텍처를 위해 투쟁하라. — Robert C. Martin의 클린 아키텍처 중

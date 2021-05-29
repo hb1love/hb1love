@@ -1,20 +1,3 @@
-// import React from 'react'
-// import { Link } from 'gatsby'
-
-// import './index.scss'
-
-// export const Header = ({ title, pages }) => {
-//   return (
-    // <header className="header">
-    //   <Link to="/">{title}</Link>
-    //   <div className="pages">
-    //     {pages.map(page => <Link to={page[1]}>{page[0]}</Link>)}
-    //   </div>
-    // </header>
-//   )
-// }
-
-
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 
