@@ -6,7 +6,7 @@ draft: false
 ---
 
 ![](./images/the-pragmatic-programmer-1.jpeg)
-Photo by  James Pond  on  Unsplash
+Photo by  James Pond on Unsplash
 
 
 실용주의 프로그래머는 다른 책들과 달리 철학적인 요소를 깊게 풀어내고, 프로그래밍 관련 지식을 두루 담고 있어서 재미있게 읽은 책 중 하나이다. 지금껏 읽어왔던 개발 관련 도서들의 종합본 같은 느낌을 조금 받기도 했고 그 와중에도 핵심은 모두 들어가 있구나? 하는 느낌을 받았다. 특히 아주 많은 팁(+명언)들이 나와서 좋았다.
